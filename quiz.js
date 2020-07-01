@@ -94,11 +94,11 @@ function startTime() {
     var timeLeft = 10;
   
     var timeInterval = setInterval(function() {
-      timeGauge.textContent = timeLeft + " seconds remaining";
+      timeGauge.textContent = "Time left: " + timeLeft;
       timeLeft--;
   
       if (timeLeft === 0) {
-        timeGauge.textContent = "";
+        timeGauge.textContent = "Game Over!";
         clearInterval(timeInterval);
         endGame();
       }
