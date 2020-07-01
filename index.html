@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -20,11 +22,6 @@
                 <button class="choice" id="B" onclick="checkAnswer('B')"></button>
                 <button class="choice" id="C" onclick="checkAnswer('C')"></button>
             </div>
-            <div id="TIMER">
-                <div id="counter"></div>
-                <div id="btimeKeeper"></div>
-                <div id="timeKeeper"></div>
-            </div>
             <div id="progress"></div>
         </div>
         <div id="scoreKeeper" style="display: block"></div>
@@ -32,6 +29,7 @@
         <div id="wrong"></div>
         <div id="correct"></div>
     </div>
+    <p id="timeGauge"></p>
     <script src="quiz.js"></script>
 </body>
 
