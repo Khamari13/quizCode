@@ -2,6 +2,24 @@
 <html lang="en">
 
 <head>
+    <style>
+        /* * {
+            text-align: center;
+            color: gold;
+            margin: 50px;
+            background-color: black;
+        } */
+
+        body {
+            background-image: url(https://media.giphy.com/media/7J86jVNR1qzqWNHxfT/giphy.gif);
+            background-repeat: repeat;
+        }
+
+        #container {
+            background-color: transparent;
+            text-align: center;
+        }
+    </style>
     <title>Quiz</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +29,27 @@
 </head>
 
 <body>
-    <div id="container"></div>
-        <button onclick="startQuiz" id="start">Start Quiz!</button>
+    <div id="container">
+        <h1>Steeler Nation Quiz</h1>
+        <button style="color: gold;" id="start" onclick="startQuiz">Start Quiz!</button>
         <div id="quiz" style="display: none">
             <div id="question"></div>
             <div id="qImg"></div>
             <div id="choices">
-                <div id="timeGauge"></div>
+                <div style="color: gold;" id="timeGauge"></div>
                 <button class="choice" id="A" onclick="checkAnswer('A')"></button>
                 <button class="choice" id="B" onclick="checkAnswer('B')"></button>
                 <button class="choice" id="C" onclick="checkAnswer('C')"></button>
             </div>
             <div id="progress"></div>
         </div>
-        <div id="scoreKeeper" style="display: block"></div>
+        <div style="color: gold;" id="scoreKeeper" style="display: block"></div>
         <br>
         <div id="wrong"></div>
         <div id="correct"></div>
     </div>
-    <p id="timeGauge"></p>
+    </div>
+    <p style="color: gold;" id="timeGauge"></p>
     <script src="quiz.js"></script>
 </body>
 

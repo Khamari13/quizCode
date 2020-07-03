@@ -89,16 +89,17 @@ function startQuiz() {
     //TIMER = setInterval(giveCounter, 1000);
 }
 
+var timeLeft = 60;
 //sets the timer
+var timeInterval
 function startTime() {
-    var timeLeft = 10;
   
-    var timeInterval = setInterval(function() {
+     timeInterval = setInterval(function() {
       timeGauge.textContent = "Time left: " + timeLeft;
       timeLeft--;
   
-      if (timeLeft === 0) {
-        timeGauge.textContent = "Game Over!";
+      if (timeLeft <= 0) {
+        timeGauge.textContent = "Enter you initials";
         clearInterval(timeInterval);
         endGame();
       }
@@ -142,18 +143,19 @@ function startTime() {
 // }
 // check answer
 function checkAnswer(answer) {
-    if (answer == questions[runningQuestion].correct) {
-        score++;
-        answerIsCorrect();
+    if (answer === questions[runningQuestion].correct) {
+        // score++;
+        // answerIsCorrect();
     } else {
-        answerIsWrong();
+        timeLeft-=10
+        //answerIsWrong();
     }
     count = 0;
     if (runningQuestion <= lastQuestion) {
         runningQuestion++;
         giveQuestion();
     } else {
-        clearInterval(TIMER);
+        clearInterval(timeInterval);
         //giveScore();
     }
 }
@@ -180,5 +182,5 @@ function endGame() {
     choiceA.innerHTML ="";
     choiceB.innerHTML ="";
     choiceC.innerHTML ="";
-    progress.textContent = `Game Over! Your Score is ${timeLeft}!!!!`;
+    progress.textContent = `Game Over! Your Score is ${timeLeft}`;
 }
