@@ -1,7 +1,9 @@
 ## Steeler Nation Quiz
 
 
-Link to Quiz gif: https://media.giphy.com/media/XbrfnXW6EcWZFUICDn/giphy.gif
+## Link to Quiz gif: https://media.giphy.com/media/XbrfnXW6EcWZFUICDn/giphy.gif
+
+## Link to Quiz: https://khamari13.github.io/quizCode/
 
 ## This code is meant to render a code that test your knowledge on the Pittsburgh Steelers NFL football team. It gives you 60 seconds to answer all five questions, and whatever time you have left over is your final score. It then ask you to enter your initials to keep in local storage for the high score page.
 
